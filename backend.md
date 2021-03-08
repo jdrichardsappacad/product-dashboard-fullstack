@@ -1,4 +1,4 @@
-# Product Data Flow
+# Product Dashboard Data Flow
 
 Today you'll begin building a fullstack Products API using Express, Sequelize,
 Postbird, React and Redux! There will be two parts to this project: creating an API and
@@ -151,7 +151,7 @@ Lastly, in order to connect to the routes modules you have just created, import
 your `./routes/index` file as the `indexRouter` and import your
 `./routes/products` file as the `productsRouter`. Make sure your application is
 using the `/` route with the `indexRouter` as well as the `/products` route with
-the `producctstsRouter`.
+the `productstsRouter`.
 
 ### Creating test routes
 
@@ -187,7 +187,7 @@ requiring your `db` from your `../db/models` directory:
 const db = require('../db/models');
 ```
 
-Now destructure your `Producct` model from the `db` you have just imported:
+Now destructure your `Product` model from the `db` you have just imported:
 
 ```js
 const { Product } = db;
