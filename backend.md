@@ -1,5 +1,7 @@
 # Product Dashboard Data Flow
 
+![Product Dashboard][dashboard-1]
+
 Today you'll begin building a fullstack Products API using Express, Sequelize,
 Postbird, React and Redux! There will be two parts to this project: creating an API and
 creating a separate client-side application using React and Redux.
@@ -461,3 +463,4 @@ To tell your frontend server to [proxy](https://create-react-app.dev/docs/proxyi
 [postman-1]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-Express/projects/api-tweets-project-postman-1.gif
 [postman-2a]: https://jd-image-upload.s3.amazonaws.com/postman1.gif
 [proxy-1]: https://create-react-app.dev/docs/proxying-api-requests-in-development/
+[dashboard-1]: https://jd-image-upload.s3.amazonaws.com/product-dashboard.gif
