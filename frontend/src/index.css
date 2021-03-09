@@ -26,6 +26,8 @@ button {
 }
 
 ul {
+  display: flex;
+  flex-direction: row;
   list-style: none;
   background: #416a59;
   padding: 20px;
@@ -104,7 +106,7 @@ input {
   padding: 0 5px 0 5px;
 }
 
-.add {
+.add-product {
   margin-top: 50px;
 }
 
