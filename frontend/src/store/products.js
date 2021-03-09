@@ -20,16 +20,17 @@ const removeOneProduct = (id) => {
   return { type: REMOVE_ONE_PRODUCT, payload: id };
 };
 
-export const getAllProducts = async (dispatch) => {
+export const getAllProducts = () => async (dispatch) => {
   const response = await fetch('/products');
   if (response.ok) {
     const data = await response.json();
+    console.log('store', data);
 
     dispatch(getProducts(data.products));
   }
 };
 
-export const addProduct = async (product, dispatch) => {
+export const addProduct = (product) => async (dispatch) => {
   const response = await fetch('/products', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -38,12 +39,12 @@ export const addProduct = async (product, dispatch) => {
 
   if (response.ok) {
     const data = await response.json();
-
+    console.log('add', data);
     dispatch(addOneProduct(data.product));
   }
 };
 
-export const deleteProduct = async (id, dispatch) => {
+export const deleteProduct = (id) => async (dispatch) => {
   const response = await fetch(`/products/${id}`, {
     method: 'DELETE'
   });

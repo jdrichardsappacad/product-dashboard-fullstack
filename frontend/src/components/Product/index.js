@@ -6,9 +6,9 @@ import ProductDetail from '../ProductDetail';
 const Products = () => {
   const dispatch = useDispatch();
   const products = useSelector((state) => Object.values(state.product));
-
+  console.log('products', products);
   useEffect(() => {
-    getAllProducts(dispatch);
+    dispatch(getAllProducts());
   }, [dispatch]);
 
   return (

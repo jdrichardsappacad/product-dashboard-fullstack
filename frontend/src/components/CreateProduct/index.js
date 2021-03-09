@@ -17,7 +17,8 @@ const CreateProduct = () => {
       name,
       price
     };
-    addProduct(payload, dispatch);
+    dispatch(addProduct(payload));
+
     history.push('/');
   };
 
