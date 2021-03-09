@@ -107,3 +107,8 @@ input {
 .add {
   margin-top: 50px;
 }
+
+.product-title {
+  font-weight: bold;
+  color: gray;
+}
