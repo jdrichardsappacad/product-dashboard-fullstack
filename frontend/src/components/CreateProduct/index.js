@@ -22,7 +22,7 @@ const CreateProduct = () => {
   };
 
   return (
-    <div className='add'>
+    <div className='add-product'>
       <h3>Add A Product</h3>
       <form onSubmit={handleSubmit} className='add-product'>
         <input

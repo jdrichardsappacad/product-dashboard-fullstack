@@ -104,6 +104,11 @@ input {
   padding: 0 5px 0 5px;
 }
 
-.add {
+.add-product {
   margin-top: 50px;
+}
+
+.product-title {
+  font-weight: bold;
+  color: gray;
 }
