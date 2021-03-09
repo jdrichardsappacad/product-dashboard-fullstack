@@ -282,6 +282,7 @@ Now that the `productNotFoundError` function is written to generate and return a
 function call into the `next` method to invoke the global error handler.
 
 Take a moment to test your route and error handling in Postman.
+![postman-post][postman-2a]
 
 ### POST /products
 
@@ -378,7 +379,7 @@ Don't forget to set the "Content-Type" header to "application/json" and send
 raw JSON data through the request body. Feel free to review how to send a POST
 request through the image below.
 
-![postman-post][postman-2a]
+![postman-post][postman-2]
 
 Take a moment to also test your error handling. You should see an error response
 in JSON upon submitting bad data (i.e. an empty `message` field). Notice that
@@ -464,3 +465,4 @@ To tell your frontend server to [proxy](https://create-react-app.dev/docs/proxyi
 [postman-2a]: https://jd-image-upload.s3.amazonaws.com/postman1.gif
 [proxy-1]: https://create-react-app.dev/docs/proxying-api-requests-in-development/
 [dashboard-1]: https://jd-image-upload.s3.amazonaws.com/product-dashboard.gif
+[postman-2]: https://jd-image-upload.s3.amazonaws.com/post_productman.gif
