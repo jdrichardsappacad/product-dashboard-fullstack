@@ -23,9 +23,17 @@ If you look inside your index.js file in the root of your src folder, you will n
 
 ## Routes
 
-Let's create routes for the components that have already been included.
+Let's create routes and paths for the components that have already been included.
 We want our Navigation to always render at the top of the screen
-We want either the Product Component or the CreateProduct Component to always render based on our choice in the Nav bar. The default path or '/' will be the Product Component and the /create will be the CreateProduct path
+We want either the Product Component or the CreateProduct Component to always render based on our choice in the Navbar.
+
+First go to the Navigation Component. Create a `ul` with 2 `li`s. Each `li` should contain a Navlink. The first `li` should have a `Navlink` for the url `'/'` which leads to the Products component. The second `li` should have a `NavLink` for the url `/create` which is for the Create Product component
+
+Now go to your App.js and set up the routes for these Navlinks.
+First import and add your Navigation component to the jsx at the top.
+Next create the routes for the components. Make sure the route for the Products component is an exact path.
+
+Test your links in the browser. You should now be able to go to your browser and click on each option which will render the corresponding component.
 
 ## Store
 
