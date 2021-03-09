@@ -81,7 +81,7 @@ project:
 npx sequelize seed:generate --name product-data
 ```
 
-Go ahead and replace the contents of the `./db/seeders/[timestamp]-test-data.js`
+Go ahead and replace the contents of the `./db/seeders/[timestamp]-test-products.js`
 with the following code:
 
 ```js
