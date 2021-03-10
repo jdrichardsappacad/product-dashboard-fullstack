@@ -131,7 +131,7 @@ Create your `handleSubmit` function. In your handleSubmit function create a `pay
 
 ![create-product][add-product-3]
 
-**Congratulations!** You have created a full data flow from React Component, to Redux, to Express, to Postgres!
+**Congratulations!** You have created a full data flow from React Component, to Redux, to Express, to Postgres and back!
 
 ## Bonus One
 
