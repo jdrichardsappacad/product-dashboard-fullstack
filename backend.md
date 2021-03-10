@@ -429,10 +429,12 @@ Lastly, send a request with Postman to test your DELETE route and delete a
 product. Verify that the product was properly deleted by viewing your seeded objects
 with Postbird.
 
+**Your backend is complete! Now move on to the [frontend](frontend.md) instructions.**
+
 [postbird-3]: https://jd-image-upload.s3.amazonaws.com/postbird3.png
 [postbird-3a]: https://jd-image-upload.s3.amazonaws.com/postbird4.png
 [postbird-4]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-Express/projects/api-tweets-project-postbird-4.png
-[postman-1]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-Express/projects/api-tweets-project-postman-1.gif
+[postman-1]: https://jd-image-upload.s3.amazonaws.com/test-backend-initial.gif
 [postman-2a]: https://jd-image-upload.s3.amazonaws.com/postman1.gif
 [proxy-1]: https://create-react-app.dev/docs/proxying-api-requests-in-development/
 [dashboard-1]: https://jd-image-upload.s3.amazonaws.com/product-dashboard.gif
