@@ -1,12 +1,31 @@
-# THUNK
+# Product Dashboard Frontend
 
-1. clone the starter at whatever address, make a starter for github with names of components, css
-2. change directory name to frontend
-3. Notice file structure
+You will now create the Frontend for your Product Dashboard.
+
+## Phase 0: Getting Started
+
+Inside your product directory, on the same level as your backend, clone the frontend starter from [address].
+Change the name of this directory to `frontend`
+
+So you should now have a `frontend` and a `backend` directory.
+
+Test your frontend by navigating into your directory and running `npm start`.
+
+## Explore the frontend application
+
+Your frontend currently contains:
+
+- `index.js` at the root: You will notice that BrowserRouter has already been included
+- `App.js`: This component will handle your Navigation Component and your routing.
+- `store` directory: Your store boilerplate in the index.js file has been supplied for you except for the reducer that you will add.
+- `store -> product.js`: This is where you will add you productReducer, thunks and action creators.
+- `Products`: This component will dispatch an action to get all of your products and will also list all of your products
+- `ProductDetail`: This component will describe the product as well as handle the delete code.
+- `CreateProduct`: This component will contain a form to create a new product
 
 ## Add a proxy
 
-To tell your frontend server to [proxy](https://create-react-app.dev/docs/proxying-api-requests-in-development/) any unknown requests to your backend server in development by adding a proxy field to your package.json.
+To tell your frontend server to [proxy](https://create-react-app.dev/docs/proxying-api-requests-in-development/) any unknown requests to your backend server in development add a proxy field to your `package.json`. Place the code beneath your devDependencies as shown in the code below.
 
 ```js
   "devDependencies": {
@@ -15,17 +34,13 @@ To tell your frontend server to [proxy](https://create-react-app.dev/docs/proxyi
   "proxy": "http://localhost:8080"
 ```
 
-You will now run your front end and your backend separately
-Backend will run on port:8080
-Frontend will run on port:3000
-
-If you look inside your index.js file in the root of your src folder, you will notice that BrowserRouter has already been connected to the application.
+You will now be able to make fetch calls to your backend using a relative path.
 
 ## Routes
 
-Let's create routes and paths for the components that have already been included.
-We want our Navigation to always render at the top of the screen
-We want either the Product Component or the CreateProduct Component to always render based on our choice in the Navbar.
+Now create routes and paths for the components that have already been included.
+You want your Navigation to always render at the top of the screen.
+You want the Product Component or the CreateProduct Component to render based on your link choice in the Navbar.
 
 First go to the Navigation Component. Create a `ul` with 2 `li`s. Each `li` should contain a Navlink. The first `li` should have a `Navlink` for the url `'/'` which leads to the Products component. The second `li` should have a `NavLink` for the url `/create` which is for the Create Product component
 
