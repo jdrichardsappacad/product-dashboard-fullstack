@@ -64,13 +64,26 @@ Choose the **State** option in the DevTools and you should see a product key wit
 
 ## Phase 1: Dispatch thunk to fetch all of your products
 
-Create a thunk `getAllProducts` that fetches all products from your backend `/products` GET route,
+In the product.js in your store directory, create a thunk `getAllProducts` that fetches all products from your backend `/products` GET route,
 `getAllProducts` should dispatch the products to an action creator called `addProducts`.
 Create a `newState` variable inside your productReducer function. It should be an empty object.
 Create a case in your productReducer for `ADD_PRODUCTS`.
 Each product that has been retrieved should be stored in the newState object using the product id as the key and the product object as the value.
 
 ![getAllProducts][reducer-1]
+
+### Products Component
+
+In your Products component you now want to retrieve all of the products from the database.
+Dispatch `getAllProducts` after first render to fetch all of the products. This dispatch should occur only once.
+
+Using `useSelector`, create a variable products that grabs the product slice of state and convert it to an array so the you can list your products in your jsx.
+
+You can test to see if you get your array by logging your products variable beneath the declaration.
+
+### ProductDetail Component
+
+You are going to want to map out all of the products using the `ProductDetail` Component as a child inside the `Products` component. So
 
 [devtools-1]: https://jd-image-upload.s3.amazonaws.com/devtools-initialstate.png
 [reducer-1]: https://jd-image-upload.s3.amazonaws.com/get-all-products-norm.png
