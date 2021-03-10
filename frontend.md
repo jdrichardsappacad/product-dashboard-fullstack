@@ -1,5 +1,7 @@
 # WIP
 
+(go to product-thunk branch for a complete thunk version)
+
 # NO THUNK
 
 1. clone the starter at whatever address, make a starter for github with names of components, css
