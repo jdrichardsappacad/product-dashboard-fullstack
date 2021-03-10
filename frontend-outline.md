@@ -112,7 +112,7 @@ Now it is time for you to create a product.
 
 ### Store
 
-In `product.js` of your store directory, create a thunk, `addProduct`, that adds a product to your database using the **POST** method on your `/products` backend route. It should dispatch the product to an action creator called `addOneProduct`. Use the `ADD_ONE_PRODUCT` case in your reducer to add a product to your already flattened state object.
+In `product.js` of your store directory, create a thunk, `addProduct`, that adds a product to your database using the **POST** method on your `/products` backend route. `addProduct` should take a product as an argument and send the product to the backend using the POST method and the `/product` backend route. When the product returns you should dispatch the product to an action creator called `addOneProduct` Add that product to the payload in the returned object of `addOneProduct`. Use the `ADD_ONE_PRODUCT` case in your reducer to update the state by adding a product to your already flattened state object.
 
 ![add-product][add-product-1]
 
@@ -127,7 +127,19 @@ You now want to create a form that will accept all values for your new product. 
 Create a form with 3 inputs, one for image, name and price as well as a submit button.
 Store the values of each input in it's own slice of component state. Remember to create controlled inputs.
 Your form element should take an event listener that runs a helper function called `handleSubmit`
-Create your `handleSubmit` function. Your handleSubmit function should create a `payload` object based on the component state for image,name and price. Then it should dispatch the `addProduct` thunk from your product.js file in your store. Finally, it should navigate to the route '/'.
+Create your `handleSubmit` function. In your handleSubmit function create a `payload` object based on the component state which contains the image, name and price. It should dispatch the `addProduct` thunk from your product.js file in your store with values from the payload. Finally, it should navigate to the route '/' which renders all of the products.
+
+![create-product][add-product-3]
+
+**Congratulations!** You have created a full data flow from React Component, to Redux, to Express, to Postgres!
+
+## Bonus One
+
+Delete a product using the button in the `ProductDetail` component, redux, and the delete route on your backend. You should use the product id for this one.
+
+## Bonus Two
+
+Create an UpdateComponent component and code the complete data flow to update the title and/or price of a product using it's id.
 
 [devtools-1]: https://jd-image-upload.s3.amazonaws.com/devtools-initialstate.png
 [reducer-1]: https://jd-image-upload.s3.amazonaws.com/get-all-products-norm.png
@@ -136,4 +148,5 @@ Create your `handleSubmit` function. Your handleSubmit function should create a 
 [product-detail-1]: https://jd-image-upload.s3.amazonaws.com/product-detail-1.png
 [add-product-1]: https://jd-image-upload.s3.amazonaws.com/add-product.png
 [add-product-2]: https://jd-image-upload.s3.amazonaws.com/add-product-reducer.png
+[add-product-3]: https://jd-image-upload.s3.amazonaws.com/create-product.png
 [dashboard-1]: https://jd-image-upload.s3.amazonaws.com/product-dashboard.gif
