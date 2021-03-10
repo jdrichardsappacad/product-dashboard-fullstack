@@ -2,9 +2,10 @@
 
 ![Product Dashboard][dashboard-1]
 
-Today you'll begin building a fullstack Products API using Express, Sequelize,
-Postbird, React and Redux! There will be two parts to this project: creating an API and
-creating a separate client-side application using React and Redux.
+Today you'll begin building a fullstack Products API using Express, Sequelize, React and Redux! There will be two parts to this project:
+
+1. Creating an backend API using Express and Sequelize.
+2. Creating a separate frontend application using React and Redux.
 
 When you have completed the first part of the project, your application should
 have the following features:
@@ -17,20 +18,19 @@ have the following features:
 
 ## Phase 0: Initialize project
 
-Begin by creating a directory called `Products`
+Begin by creating a directory called `Products`.
 `cd` into the directory and clone the project skeleton:
 
 ```sh
 git clone https://github.com/appacademy-starters/express-sequelize-starter.git
 ```
 
-Change the directory name `express-sequelize-starter` to `backend`
+Change the directory name `express-sequelize-starter` to `backend`.
 `cd` into the `backend` directory and install your packages with `npm install`.
 
 ### Initializing Sequelize
 
-Just like in the To-Do list demo project, the Sequelize CLI is already
-configured to know where your database configuration is located and where to
+The Sequelize CLI is already configured to know where your database configuration is located and where to
 generate the `models`, `seeders`, and `migrations` folders. The project skeleton
 has already taken care of configuration by including complete `.sequelizerc`,
 `./config/index.js`, and `./config/database.js` files.
@@ -47,10 +47,10 @@ Before initializing the `Product` model, you'll need to create a new database.
 
 Take a moment to create a database user and database:
 
-- The login name that you must use is "product_app" (make sure to set a
+- The login user name that you should use is "product_app" (make sure to set a
   login password).
 - Your user must be granted the CREATEDB privilege so that you can run `npx dotenv sequelize-cli db:create`.
-- The database name that you must use is "product".
+- The database name that you should use is "product_app".
 
 ## Phase 1: Set up the Product model
 
@@ -78,7 +78,7 @@ Now generate a seed file by running the following command from the root of your
 project:
 
 ```sh
-npx sequelize seed:generate --name product-data
+npx sequelize seed:generate --name test-products
 ```
 
 Go ahead and replace the contents of the `./db/seeders/[timestamp]-test-products.js`
@@ -153,7 +153,7 @@ Lastly, in order to connect to the routes modules you have just created, import
 your `./routes/index` file as the `indexRouter` and import your
 `./routes/products` file as the `productsRouter`. Make sure your application is
 using the `/` route with the `indexRouter` as well as the `/products` route with
-the `productstsRouter`.
+the `productsRouter`.
 
 ### Creating test routes
 
