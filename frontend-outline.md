@@ -1,4 +1,4 @@
-NO THUNK
+# NO THUNK
 
 1. clone the starter at whatever address, make a starter for github with names of components, css
 2. change directory name to frontend
