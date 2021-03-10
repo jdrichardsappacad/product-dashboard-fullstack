@@ -64,6 +64,13 @@ Choose the **State** option in the DevTools and you should see a product key wit
 
 ## Phase 1: Dispatch thunk to fetch all of your products
 
-Create a thunk and an action creator to retrieve all products from your backend route `/products`
+Create a thunk `getAllProducts` that fetches all products from your backend `/products` GET route,
+`getAllProducts` should dispatch the products to an action creator called `addProducts`.
+Create a `newState` variable inside your productReducer function. It should be an empty object.
+Create a case in your productReducer for `ADD_PRODUCTS`.
+Each product that has been retrieved should be stored in the newState object using the product id as the key and the product object as the value.
+
+![getAllProducts][reducer-1]
 
 [devtools-1]: https://jd-image-upload.s3.amazonaws.com/devtools-initialstate.png
+[reducer-1]: https://jd-image-upload.s3.amazonaws.com/get-all-products-norm.png
