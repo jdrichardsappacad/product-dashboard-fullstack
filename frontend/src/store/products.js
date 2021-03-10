@@ -1,10 +1,10 @@
-const GET_PRODUCTS = 'products/getproducts';
+const ADD_PRODUCTS = 'products/getproducts';
 const ADD_ONE_PRODUCT = 'products/addOneProduct';
 const REMOVE_ONE_PRODUCT = 'products/removeOneProduct';
 
-const getProducts = (payload) => {
+const addProducts = (payload) => {
   return {
-    type: GET_PRODUCTS,
+    type: ADD_PRODUCTS,
     payload
   };
 };
@@ -26,7 +26,7 @@ export const getAllProducts = () => async (dispatch) => {
     const data = await response.json();
     console.log('store', data);
 
-    dispatch(getProducts(data.products));
+    dispatch(addProducts(data.products));
   }
 };
 
@@ -54,7 +54,7 @@ export const deleteProduct = (id) => async (dispatch) => {
 const productReducer = (state = {}, action) => {
   let newState = {};
   switch (action.type) {
-    case GET_PRODUCTS:
+    case ADD_PRODUCTS:
       action.payload.forEach((product) => (newState[product.id] = product));
       return newState;
     case ADD_ONE_PRODUCT:

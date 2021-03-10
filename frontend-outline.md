@@ -11,7 +11,7 @@ So you should now have a `frontend` and a `backend` directory.
 
 Test your frontend by navigating into your directory and running `npm start`.
 
-## Explore the frontend application
+### Explore the frontend application
 
 Your frontend currently contains:
 
@@ -23,7 +23,7 @@ Your frontend currently contains:
 - `ProductDetail`: This component will describe the product as well as handle the delete code.
 - `CreateProduct`: This component will contain a form to create a new product
 
-## Add a proxy
+### Add a proxy
 
 To tell your frontend server to [proxy](https://create-react-app.dev/docs/proxying-api-requests-in-development/) any unknown requests to your backend server in development add a proxy field to your `package.json`. Place the code beneath your devDependencies as shown in the code below.
 
@@ -36,26 +36,34 @@ To tell your frontend server to [proxy](https://create-react-app.dev/docs/proxyi
 
 You will now be able to make fetch calls to your backend using a relative path.
 
-## Routes
+### Routes
 
 Now create routes and paths for the components that have already been included.
 You want your Navigation to always render at the top of the screen.
 You want the Product Component or the CreateProduct Component to render based on your link choice in the Navbar.
 
-First go to the Navigation Component. Create a `ul` with 2 `li`s. Each `li` should contain a Navlink. The first `li` should have a `Navlink` for the url `'/'` which leads to the Products component. The second `li` should have a `NavLink` for the url `/create` which is for the Create Product component
+Go to the Navigation Component. Create a `ul` with 2 `li`s. Each `li` should contain a Navlink. The first `li` should have a `Navlink` for the url `'/'` which leads to the **Products** component. The second `li` should have a `NavLink` for the url `/create` which is for the **CreateProduct** component
 
 Now go to your App.js and set up the routes for these Navlinks.
-First import and add your Navigation component to the jsx at the top.
-Next create the routes for the components. Make sure the route for the Products component is an exact path.
+Remove the default code but leave the Fragments.
+Add your Navigation component to the jsx.
+Beneath the Navigation component create the routes for the Products and CreateProduct components. Make sure the route for the Products component is an exact path.
 
-Test your links in the browser. You should now be able to go to your browser and click on each option which will render the corresponding component.
+Test your links in the browser. You should now be able to click on each option in the Navbar and render corresponding component.
 
-## Store
+### Store
 
-In your store directory in the products file, create a `productReducer` with an empty object as the `initialState`
+In the products.js file of your store directory, create a `productReducer` with an empty object as the `initialState`.
 
 Now go to your the `index.js` file in your store and add that `productReducer` to your rootReducer. It should be named `product`.
 
-## Create Actions and Thunks
+Test that your store is connected by going to your browser and looking in your Redux DevTools.
+Choose the **State** option in the DevTools and you should see a product key with an empty object.
 
-1. Create a thunk and an action creator to retrieve all products from the backend
+![initialState][devtools-1]
+
+## Phase 1: Dispatch thunk to fetch all of your products
+
+Create a thunk and an action creator to retrieve all products from your backend route `/products`
+
+[devtools-1]: https://jd-image-upload.s3.amazonaws.com/devtools-initialstate.png
