@@ -27,3 +27,36 @@
         
     }
 
+
+
+
+
+    return (
+        <div>
+          <div className='products'>
+            {products?.map(({ id, image, name, price }) => (
+              <ProductDetail
+                key={id}
+                id={id}
+                image={image}
+                name={name}
+                price={price}
+              />
+            ))}
+          </div>
+        </div>
+    );
+
+
+
+
+
+
+
+
+    const addOneProduct = (payload) => {
+        return {
+          type: ADD_ONE_PRODUCT,
+          payload
+        };
+      };
