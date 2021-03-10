@@ -106,7 +106,7 @@ Remember to account for the fact that there will be no values on the first rende
 You can use the [optional chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) operator to handle this behavior.
 You should now be able to render all of your products in the route '/' with the Products Component.
 
-## Phase 3 Create A Product
+## Phase 2 Create A Product
 
 Now it is time for you to create a product.
 
