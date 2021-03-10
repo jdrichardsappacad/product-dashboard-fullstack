@@ -1,4 +1,4 @@
-const ADD_PRODUCTS = 'products/getproducts';
+const ADD_PRODUCTS = 'products/addProducts';
 const ADD_ONE_PRODUCT = 'products/addOneProduct';
 const REMOVE_ONE_PRODUCT = 'products/removeOneProduct';
 
