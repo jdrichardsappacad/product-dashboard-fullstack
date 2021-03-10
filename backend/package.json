@@ -19,6 +19,7 @@
     "morgan": "^1.10.0",
     "per-env": "^1.0.2",
     "pg": "^8.0.0",
+    "redux-thunk": "^2.3.0",
     "sequelize": "^5.21.6"
   },
   "devDependencies": {

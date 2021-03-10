@@ -24,8 +24,6 @@ export const getAllProducts = () => async (dispatch) => {
   const response = await fetch('/products');
   if (response.ok) {
     const data = await response.json();
-    console.log('store', data);
-
     dispatch(addProducts(data.products));
   }
 };
@@ -48,7 +46,10 @@ export const deleteProduct = (id) => async (dispatch) => {
   const response = await fetch(`/products/${id}`, {
     method: 'DELETE'
   });
-  dispatch(removeOneProduct(id));
+
+  if (response.ok) {
+    dispatch(removeOneProduct(id));
+  }
 };
 
 const productReducer = (state = {}, action) => {
