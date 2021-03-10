@@ -429,34 +429,6 @@ Lastly, send a request with Postman to test your DELETE route and delete a
 product. Verify that the product was properly deleted by viewing your seeded objects
 with Postbird.
 
-## Phase 4: Render products in the frontend application
-
-Up to this point, you’ve set up a CRUD API for products. All users of your API
-have access to the following features:
-
-- Viewing all existing products
-- Viewing a product specific product
-- Creating a product
-- Updating a product
-- Deleting a product
-
-Now that you have a fully functioning API, you can create a React
-application to render the client-side code for the Product Lite user interface.
-
-Create a folder called frontend
-Use the create-react-app command from inside your frontend folder to initialize React inside of the frontend folder:
-
-npx create-react-app . --template @appacademy/react-redux-v17 --use-npm
-
-To tell your frontend server to [proxy](https://create-react-app.dev/docs/proxying-api-requests-in-development/) any unknown requests to your backend server in development, add a proxy field to your package.json.
-
-```js
-  "devDependencies": {
-    "redux-logger": "^3.0.6"
-  },
-  "proxy": "http://localhost:8080"
-```
-
 [postbird-3]: https://jd-image-upload.s3.amazonaws.com/postbird3.png
 [postbird-3a]: https://jd-image-upload.s3.amazonaws.com/postbird4.png
 [postbird-4]: https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-Express/projects/api-tweets-project-postbird-4.png
